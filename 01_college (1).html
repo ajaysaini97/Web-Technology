@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABC College of Technology</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:#f5f7fb;color:#172033;line-height:1.6}
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-bottom:1px solid #e7eaf0;padding:14px 6%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:1.25rem;color:#2563eb}.links{display:flex;gap:24px}.links a{text-decoration:none;color:#475569;font-weight:600}.links a:hover{color:#2563eb}
+.container{width:min(1120px,90%);margin:auto}.hero{min-height:76vh;display:grid;place-items:center;text-align:center;padding:80px 20px;background:radial-gradient(circle at 20% 20%,#dbeafe,transparent 32%),radial-gradient(circle at 80% 10%,#e0e7ff,transparent 30%),#fff}
+.hero h1{font-size:clamp(2.5rem,7vw,5.5rem);line-height:1.05;letter-spacing:-3px}.hero p{font-size:1.15rem;color:#64748b;margin:20px auto 30px;max-width:650px}
+.btn{display:inline-block;padding:13px 22px;border-radius:14px;background:#2563eb;color:#fff;text-decoration:none;font-weight:700;box-shadow:0 12px 30px #2563eb33;transition:.3s}.btn:hover{transform:translateY(-3px)}
+section{padding:85px 0}.section-title{text-align:center;margin-bottom:40px}.section-title h2{font-size:2.3rem}.section-title p{color:#64748b}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:#fff;padding:28px;border:1px solid #e8ebf2;border-radius:22px;box-shadow:0 12px 35px #0f172a0a;transition:.35s}.card:hover{transform:translateY(-8px);box-shadow:0 20px 45px #0f172a14}.icon{font-size:2rem;margin-bottom:12px}.card p{color:#64748b}
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.news .card{border-left:4px solid #2563eb}
+.contact{background:#0f172a;color:#fff}.contact .card{background:#172033;color:#fff;border-color:#26324a}.contact p{color:#b9c3d4}
+.reveal{opacity:0;transform:translateY(30px);transition:.7s}.reveal.show{opacity:1;transform:none}
+footer{text-align:center;padding:25px;background:#080d18;color:#94a3b8}
+@media(max-width:800px){.links{gap:10px;font-size:.85rem}.grid{grid-template-columns:1fr 1fr}.news{grid-template-columns:1fr}.hero h1{letter-spacing:-1px}}@media(max-width:520px){.links{display:none}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="logo">ABC College</div><div class="links"><a href="#home">Home</a><a href="#courses">Courses</a><a href="#news">News</a><a href="#contact">Contact</a></div></nav>
+<header class="hero" id="home"><div class="reveal"><p>Knowledge • Innovation • Excellence</p><h1>Build Your Future<br>With Technology.</h1><p>ABC College of Technology provides quality education in Computer Science, Information Technology and Management.</p><a class="btn" href="#courses">Explore Courses ↓</a></div></header>
+<section id="courses"><div class="container"><div class="section-title reveal"><h2>Our Courses</h2><p>Learn skills that are ready for the real world.</p></div><div class="grid">
+<div class="card reveal"><div class="icon">💻</div><h3>BCA</h3><p>Bachelor of Computer Applications.</p></div><div class="card reveal"><div class="icon">🚀</div><h3>MCA</h3><p>Master of Computer Applications.</p></div><div class="card reveal"><div class="icon">⚙️</div><h3>B.Tech CSE</h3><p>Computer Science engineering.</p></div><div class="card reveal"><div class="icon">🧠</div><h3>M.Tech CSE</h3><p>Advanced computer science studies.</p></div>
+</div></div></section>
+<section id="news"><div class="container"><div class="section-title reveal"><h2>Latest News</h2><p>Stay updated with campus activities.</p></div><div class="news">
+<div class="card reveal"><h3>Admission Open</h3><p>Admission open for 2026–27.</p></div><div class="card reveal"><h3>Technical Fest</h3><p>Annual Technical Fest will be held in September.</p></div><div class="card reveal"><h3>Internship Program</h3><p>Registration is open for the internship program.</p></div>
+</div></div></section>
+<section class="contact" id="contact"><div class="container"><div class="section-title reveal"><h2>Start Your Journey</h2><p>Connect with ABC College of Technology.</p></div></div></section>
+<footer>© 2026 ABC College of Technology</footer>
+<script>
+const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>observer.observe(x));
+</script>
+</body></html>

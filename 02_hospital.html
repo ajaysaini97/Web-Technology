@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>City Care Hospital</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,Arial,sans-serif;background:#f6fbff;color:#102033}
+nav{position:sticky;top:0;z-index:10;background:#ffffffdd;backdrop-filter:blur(16px);padding:14px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e4eef5}.logo{font-size:1.3rem;font-weight:800;color:#087ea4}.links{display:flex;gap:24px}.links a{text-decoration:none;color:#496273;font-weight:600}.links a:hover{color:#087ea4}
+.hero{padding:100px 7%;min-height:75vh;display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,#e8f8ff,#fff)}.hero h1{font-size:clamp(3rem,7vw,6rem);line-height:1;letter-spacing:-3px}.hero p{margin:20px auto;max-width:680px;color:#647b89;font-size:1.1rem}.badge{display:inline-block;padding:8px 14px;background:#dff7ff;color:#087ea4;border-radius:99px;font-weight:700}.btn{display:inline-block;background:#087ea4;color:white;text-decoration:none;padding:14px 24px;border-radius:14px;font-weight:700;box-shadow:0 12px 30px #087ea433;transition:.3s}.btn:hover{transform:translateY(-3px)}
+section{padding:80px 0}.container{width:min(1120px,90%);margin:auto}.title{text-align:center;margin-bottom:40px}.title h2{font-size:2.3rem}.title p{color:#6b7f8d}.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}.card{background:#fff;border:1px solid #e3edf2;border-radius:20px;padding:25px;transition:.35s;box-shadow:0 12px 30px #0b52630b}.card:hover{transform:translateY(-7px)}.emoji{font-size:2rem}.card p{color:#6b7f8d;margin-top:7px}
+.emergency{background:#102b38;color:white;border-radius:28px;padding:45px;display:flex;justify-content:space-between;align-items:center;gap:25px}.emergency p{color:#bdd0d8}.call{background:white;color:#087ea4;padding:13px 20px;border-radius:13px;text-decoration:none;font-weight:800}
+.reveal{opacity:0;transform:translateY(28px);transition:.7s}.reveal.show{opacity:1;transform:none}footer{text-align:center;background:#091c25;color:#9db0b8;padding:25px}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.links{display:none}.emergency{flex-direction:column;align-items:flex-start}}@media(max-width:500px){.grid{grid-template-columns:1fr}}
+</style></head>
+<body>
+<nav><div class="logo">✚ City Care</div><div class="links"><a href="#home">Home</a><a href="#about">About</a><a href="#departments">Departments</a><a href="#emergency">Emergency</a></div></nav>
+<header class="hero" id="home"><div class="reveal"><span class="badge">24/7 Healthcare</span><h1>Care that puts<br>you first.</h1><p>City Care Hospital provides modern healthcare facilities with experienced doctors and trained medical staff.</p><a class="btn" href="#departments">View Departments</a></div></header>
+<section id="about"><div class="container"><div class="title reveal"><h2>Modern Healthcare</h2><p>Compassionate care supported by professional medical teams.</p></div></div></section>
+<section id="departments"><div class="container"><div class="title reveal"><h2>Our Departments</h2></div><div class="grid">
+<div class="card reveal"><span class="emoji">❤️</span><h3>Cardiology</h3><p>Heart care.</p></div><div class="card reveal"><span class="emoji">🧠</span><h3>Neurology</h3><p>Brain & nerve care.</p></div><div class="card reveal"><span class="emoji">🦴</span><h3>Orthopedics</h3><p>Bone & joint care.</p></div><div class="card reveal"><span class="emoji">🩺</span><h3>General Medicine</h3><p>Complete primary care.</p></div><div class="card reveal"><span class="emoji">👶</span><h3>Pediatrics</h3><p>Children's healthcare.</p></div>
+</div></div></section>
+<section id="emergency"><div class="container"><div class="emergency reveal"><div><h2>Emergency Services</h2><p>Available 24 hours a day, 7 days a week.</p></div><a class="call" href="tel:9876543210">☎ 9876543210</a></div></div></section>
+<footer>© 2026 City Care Hospital</footer>
+<script>const o=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('show')),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>o.observe(x));</script>
+</body></html>
